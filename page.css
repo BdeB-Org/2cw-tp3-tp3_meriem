@@ -20,12 +20,14 @@ header {
 }
 
 nav {
-    text-align: right;
+    margin-left: auto;
+    text-align: 30px;
 
 }
 
 section {
-    padding: 20px;
+    margin: 0;
+    padding: 0;
     text-align: center;
 }
 
