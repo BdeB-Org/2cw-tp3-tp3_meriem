@@ -4,11 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>page recherche 2</title>
+    <title>page animaux</title>
+    <link rel="stylesheet" href="page.css">
 </head>
 
 <body>
-
+    <header>
+        <h1>Bienvenue</h1>
+        <nav>
+            <a href="./page1.html">menu</a>
+            <a href="">langue</a>
+            <a href="">question?</a>
+            <a href="./page2.html">recherche</a>
+        </nav>
+    </header>
+    <form class="qa-container">
+        <div class="question"> Le nom d'un animal?</div>
+        <div class="answer"><input type="text" id="userResponse" placeholder="Votre réponse ici"></div>
+        <button type="submit">recherche</button>
+    </form>
+    <div id="resultatAnimal"></div>
+    <script src="script.js"></script>
 </body>
 
 </html>
