@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Page pays</title>
     <link rel="stylesheet" href="page.css">
 </head>
 
@@ -12,24 +12,29 @@
     <header>
         <h1>Bienvenue</h1>
         <nav>
-            <a href="./page1.html">menu</a>
-            <a href="">langue</a>
-            <a href="">question?</a>
-            <a href="./page2.html">recherche</a>
+            <a href="./page1.html">Menu</a>
+            <a href="">Question?</a>
+            <a href="./page2.html">Recherche</a>
+
+            <select id="language-selector">
+                <option value="en">English</option>
+                <option value="fr">Français</option>
+            </select>
         </nav>
-
-        <form class="qa-container">
-            <div class="question"> Le nom d'un pays?</div>
-            <div class="answer"><input type="text" id="userResponse" placeholder="Votre réponse ici"></div>
-            <button type="submit">recherche</button>
-        </form>
-        <div id="resultatCapital"></div>
-        <script src="page3.js"></script>
-
-        <footer>
-            <p>&copy; 2024 , MT</p>
-        </footer>
     </header>
+
+    <form id="country-form">
+        <h2>Rechercher un Livre</h2>
+        <input type="text" id="search-input" placeholder="Nom du pays">
+        <button type="submit()">Rechercher</button>
+    </form>
+
+    <div id="country-results"></div>
+
+    <footer>
+        <p>&copy; 2024 , MT</p>
+    </footer>
+    <script src=""></script>
 </body>
 
 </html>
