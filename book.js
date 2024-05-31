@@ -1,19 +1,32 @@
-const sql = require('sql.js');
-const db = new sql.Database('data.sql'); // replace 'data.sql' with your database file
 
-const searchInput = document.getElementById('search-input');
+const searchButton = document.getElementById('search-input');
 
-searchInput.addEventListener('input', (e) => {
-    const results = db.exec(`SELECT * FROM books WHERE title LIKE '%${searchInput}%'`);
+searchButton.addEventListener('click', async () => {
 
-    const bookResults = document.getElementById('book-results');
-    bookResults.innerHTML = '';
+    const searchValue = document.getElementById('search-input').value;
 
-    results.forEach((row) => {
-        const bookHTML = `
-      <h2>${row.title}</h2>
-      <p>${row.description}</p>
-    `;
-        bookResults.innerHTML += bookHTML;
+    const response = await fetch('data.sql');
+    const data = await response.text();
+
+
+    const books = await parseSql(data);
+
+    const filteredBooks = books.filter((book) => {
+        return book.title.includes(searchValue);
+    });
+
+    const resultDiv = document.getElementById('book-results');
+    resultDiv.innerHTML = '';
+    filteredBooks.forEach((book) => {
+        const bookDiv = document.createElement('div');
+        bookDiv.innerHTML = `<h2>${book.title}</h2><p>${book.author}</p><p>${book.description}</p>`;
+        resultDiv.appendChild(bookDiv);
     });
 });
+
+async function parseSql(sql) {
+    const db = new SQL.Database();
+    db.exec(sql);
+    const books = db.exec('SELECT * FROM books');
+    return books;
+}
