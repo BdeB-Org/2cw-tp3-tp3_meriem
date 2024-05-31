@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>page animaux</title>
+    <title>Page Animaux</title>
     <link rel="stylesheet" href="page.css">
 </head>
 
@@ -12,20 +12,27 @@
     <header>
         <h1>Bienvenue</h1>
         <nav>
-            <a href="./page1.html">menu</a>
-            <a href="">langue</a>
-            <a href="">question?</a>
-            <a href="./page2.html">recherche</a>
+            <a href="./page1.html">Menu</a>
+            <a href="">Question?</a>
+            <a href="./page2.html">Recherche</a>
+
+            <select id="language-selector">
+                <option value="en">English</option>
+                <option value="fr">Français</option>
+            </select>
         </nav>
     </header>
     <form id="animal-form">
         <h2>Rechercher un Animal</h2>
         <input type="text" id="animal-name" placeholder="Nom de l'animal">
         <button type="submit">Rechercher</button>
-        <script src="page3.js"></script>
     </form>
+    <div id="animal-results"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="page3.js"></script>
     <footer>
-        <p>&copy; 2024 , MT</p>
+        <p>&copy; 2024, MT</p>
     </footer>
 </body>
 

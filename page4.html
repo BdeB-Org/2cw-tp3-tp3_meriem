@@ -4,32 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Recherche de livres</title>
     <link rel="stylesheet" href="page.css">
 </head>
 
 <body>
     <header>
-        <h1>Bienvenue</h1>
+        <h1>Bienvenue à la recherche de livres</h1>
         <nav>
-            <a href="./page1.html">menu</a>
-            <a href="">langue</a>
-            <a href="">question?</a>
-            <a href="./page2.html">recherche</a>
+            <a href="./page1.html">Menu</a>
+            <a href="">Langue</a>
+            <a href="">Question?</a>
+            <a href="./page2.html">Recherche</a>
         </nav>
-
-        <form class="qa-container">
-            <div class="question"> choisissez une plante?</div>
-            <div class="answer"><input type="text" id="userResponse" placeholder="Votre réponse ici"></div>
-            <button type="submit">recherche</button>
-        </form>
-        <div id="resultatPlante"></div>
-        <script src="page3.js"></script>
-
-        <footer>
-            <p>&copy; 2024 , MT</p>
-        </footer>
     </header>
+
+    <form id="book-form">
+        <h2>Rechercher un Livre</h2>
+        <input type="text" id="search-input" placeholder="Nom du livre">
+        <button type="submit()">Rechercher</button>
+    </form>
+
+    <div id="book-results"></div>
+
+    <footer>
+        <p>&copy; 2024 , MT</p>
+    </footer>
+    <script src="page4.js"></script>
 </body>
 
 </html>
